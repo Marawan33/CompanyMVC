@@ -5,7 +5,7 @@ namespace Company.Web
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            //initiate Dev
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
