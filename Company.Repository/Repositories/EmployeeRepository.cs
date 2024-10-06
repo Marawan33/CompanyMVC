@@ -17,6 +17,12 @@ namespace Company.Repository.Repositories
         {
             _context = context;
         }
-       
+
+        public IEnumerable<Employee> GetEmployeeByAddress(string address)
+          => _context.Employees.Where(x => x.Name.Trim().ToLower().Contains(address.Trim().ToLower())).ToList();
+
+
+        public IEnumerable<Employee> GetEmployeeByName(string name)
+        => _context.Employees.Where(x => x.Name.Trim().ToLower().Contains(name.Trim().ToLower())).ToList();
     }
 }
